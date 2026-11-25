@@ -1,3 +1,30 @@
+# Listing
+
+A Laravel 8 application using Inertia.js and Vue 3, with authentication and a protected dashboard.
+
+## Local development
+
+This is a legacy Laravel 8 project. Use a PHP and Node.js environment compatible with the locked dependencies; review dependency security before deploying publicly.
+
+```bash
+git clone https://github.com/qurban-ali/listing.git
+cd listing
+composer install
+cp .env.example .env
+php artisan key:generate
+npm ci
+npm run dev
+```
+
+Create an empty local MySQL database, then set `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` in `.env`. With the local database configured, run:
+
+```bash
+php artisan migrate
+php artisan serve
+```
+
+Open the local URL printed by Artisan (usually http://127.0.0.1:8000). Run `npm run watch` to rebuild frontend assets during development, and `php artisan test` to run tests against a dedicated test database. Never use production credentials for local development or testing.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
